@@ -10,7 +10,7 @@ const navigationEvents = {
 };
 
 const footerEvents = {
-    'Contact Support Link': 'ev-contact-support',
+    'Chat Now': 'ev-chat',
 };
 
 const events = {
@@ -18,6 +18,7 @@ const events = {
         'Home Screen': homeScreenEvents,
         'Navigation': navigationEvents,
         'Footer': footerEvents,
+        'Shopping Cart': shoppingCart;
     },
 };
 
@@ -30,5 +31,8 @@ iterKeys(events, category => iterKeys(events[category], label => iterKeys(events
             category,
             label,
         });
+        if (label === 'Shoping Cart') {
+          slackChannelAlert(label);
+        }
     });
 })));
