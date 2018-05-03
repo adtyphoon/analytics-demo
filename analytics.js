@@ -13,6 +13,12 @@ const footerEvents = {
     'Chat Now': 'ev-chat',
 };
 
+const shoppingCart = {
+  'Checkout Button': 'ev-checkout-button',
+  'Checkout Success': 'ev-checkout-success',
+  'PayPal Success': 'ev-paypal-success',
+};
+
 const events = {
     'Shopping-Site': {
         'Home Screen': homeScreenEvents,
