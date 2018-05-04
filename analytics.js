@@ -13,7 +13,7 @@ const footerEvents = {
     'Chat Now': 'ev-chat',
 };
 
-const shoppingCart = {
+const shoppingCartEvents = {
   'Checkout Button': 'ev-checkout-button',
   'Checkout Success': 'ev-checkout-success',
   'PayPal Success': 'ev-paypal-success',
@@ -24,7 +24,7 @@ const events = {
         'Home Screen': homeScreenEvents,
         'Navigation': navigationEvents,
         'Footer': footerEvents,
-        'Shopping Cart': shoppingCart;
+        'Shopping Cart': shoppingCartEvents;
     },
 };
 
@@ -37,7 +37,7 @@ iterKeys(events, category => iterKeys(events[category], label => iterKeys(events
             category,
             label,
         });
-        if (label === 'Shoping Cart') {
+        if (label === 'Shopping Cart') {
           slackChannelAlert(label);
         }
     });
