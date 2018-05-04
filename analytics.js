@@ -10,7 +10,13 @@ const navigationEvents = {
 };
 
 const footerEvents = {
-    'Contact Support Link': 'ev-contact-support',
+    'Chat Now': 'ev-chat',
+};
+
+const shoppingCartEvents = {
+  'Checkout Button': 'ev-checkout-button',
+  'Checkout Success': 'ev-checkout-success',
+  'PayPal Success': 'ev-paypal-success',
 };
 
 const events = {
@@ -18,6 +24,7 @@ const events = {
         'Home Screen': homeScreenEvents,
         'Navigation': navigationEvents,
         'Footer': footerEvents,
+        'Shopping Cart': shoppingCartEvents;
     },
 };
 
@@ -30,5 +37,8 @@ iterKeys(events, category => iterKeys(events[category], label => iterKeys(events
             category,
             label,
         });
+        if (label === 'Shopping Cart') {
+          slackChannelAlert(label);
+        }
     });
 })));
