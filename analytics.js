@@ -20,7 +20,7 @@ const shoppingCartEvents = {
 };
 
 const chatEvents = {
-  'Chat submit': '"submit-chat"',
+  'Chat Submit': 'ev-submit-chat',
 };
 
 const events = {
@@ -28,8 +28,8 @@ const events = {
         'Home Screen': homeScreenEvents,
         'Navigation': navigationEvents,
         'Footer': footerEvents,
-        'Shopping Cart': shoppingCartEvents;
-        'chat': chatEvents;
+        'Shopping Cart': shoppingCartEvents,
+        'Chat': chatEvents,
     },
 };
 
@@ -44,8 +44,8 @@ iterKeys(events, category => iterKeys(events[category], label => iterKeys(events
         });
         if (label === 'Shopping Cart') {
           slackChannelAlert(label);
-        } else if (label = 'blog') {
-          slackChannelAlert('chat');
+        } else if (label === 'Chat') {
+          slackChannelAlert(label);
         }
     });
 })));
