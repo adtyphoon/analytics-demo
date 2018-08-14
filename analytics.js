@@ -1,3 +1,5 @@
+import {slackChannelAlert} from './Slack';
+
 const homeScreenEvents = {
     'Buy Button': 'ev-buy',
     'Chat Button': 'ev-chat',
@@ -21,6 +23,13 @@ const shoppingCartEvents = {
 
 const chatEvents = {
   'Chat Submit': 'ev-submit-chat',
+  'Open Chat Window': 'ev-open-chat-window'
+};
+
+const profileEvents = {
+  'Upload Image': 'ev-upload-image',
+  'Update Password': 'ev-update-password',
+  'Update Username': 'ev-username-submit',
 };
 
 const events = {
@@ -30,6 +39,7 @@ const events = {
         'Footer': footerEvents,
         'Shopping Cart': shoppingCartEvents,
         'Chat': chatEvents,
+        'Profile': profileEvents,
     },
 };
 
@@ -42,9 +52,7 @@ iterKeys(events, category => iterKeys(events[category], label => iterKeys(events
             category,
             label,
         });
-        if (label === 'Shopping Cart') {
-          slackChannelAlert(label);
-        } else if (label === 'Chat') {
+        if (label === 'Shopping Cart' || label === 'Chat') {
           slackChannelAlert(label);
         }
     });
