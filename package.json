@@ -1,0 +1,52 @@
+{
+   "name":"nina",
+   "version":"1.0.0",
+   "description":"Nina CCB Service",
+   "main":"index.js",
+   "dependencies":{
+      "@types/dotenv":"^4.0.3",
+      "@types/graphql":"^0.13.3",
+      "apollo-server":"^2.0.0-rc.5",
+      "dotenv":"^6.0.0",
+      "graphql":"^0.13.2",
+      "pg":"^7.4.3",
+      "pg-hstore":"^2.3.2",
+      "pg-promise":"^8.4.5",
+      "sequelize":"^4.38.0",
+      "sequelize-transforms":"^2.0.0",
+      "tedious":"^2.6.4",
+      "uglifyjs-webpack-plugin":"^1.2.7",
+      "webpack-cli":"^3.1.0"
+   },
+   "devDependencies":{
+      "babel-core":"^6.26.3",
+      "babel-loader":"^7.1.5",
+      "babel-preset-env":"^1.7.0",
+      "graphql-tag":"^2.9.2",
+      "nodemon":"^1.18.3",
+      "ts-loader":"^4.4.2",
+      "typescript":"^3.0.1",
+      "webpack":"^4.16.5",
+      "webpack-graphql-loader":"^1.0.0"
+   },
+   "scripts":{
+      "test":"echo \"Error: no test specified\" && exit 1",
+      "build":"./node_modules/.bin/webpack",
+      "start-package":"node dist/bundle.js",
+      "start":"./node_modules/.bin/nodemon"
+   },
+   "repository":{
+      "type":"git",
+      "url":"githttps://github.com/sjwaterco/nina.git"
+   },
+   "author":"",
+   "license":"ISC",
+   "bugs":{
+      "url":"https://github.com/sjwaterco/nina/issues"
+   },
+   "homepage":"https://github.com/sjwaterco/nina#readme",
+   "optionalDependencies":{
+      "bufferutil":"^4.0.0",
+      "utf-8-validate":"^5.0.1"
+   }
+}
