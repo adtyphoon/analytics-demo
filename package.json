@@ -1,7 +1,7 @@
 {
-   "name":"nina",
+   "name":"Dan Sample",
    "version":"1.0.0",
-   "description":"Nina CCB Service",
+   "description":"Dan Mateer",
    "main":"index.js",
    "dependencies":{
       "@types/dotenv":"^4.0.3",
@@ -37,14 +37,14 @@
    },
    "repository":{
       "type":"git",
-      "url":"githttps://github.com/sjwaterco/nina.git"
+      "url":"githttps://github.com/danmateer/analytics-demo.git"
    },
    "author":"",
    "license":"ISC",
    "bugs":{
-      "url":"https://github.com/sjwaterco/nina/issues"
+      "url":"https://github.com/danmateer"
    },
-   "homepage":"https://github.com/sjwaterco/nina#readme",
+   "homepage":"https",
    "optionalDependencies":{
       "bufferutil":"^4.0.0",
       "utf-8-validate":"^5.0.1"
