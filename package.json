@@ -1,7 +1,7 @@
 {
   "name": "analytics-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@svgr/webpack": "2.4.1",
