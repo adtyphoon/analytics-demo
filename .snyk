@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - skipper > lodash:
+        patched: '2019-07-11T22:41:34.529Z'
+    - grunt-ngdocs > upath > lodash:
+        patched: '2019-07-11T22:41:34.529Z'
+    - sails-redis > waterline-cursor > lodash:
+        patched: '2019-07-11T22:41:34.529Z'
+    - waterline > waterline-criteria > lodash:
+        patched: '2019-07-11T22:41:34.529Z'
+  'npm:minimatch:20160620':
+    - sequelize-cli > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2019-07-11T22:41:34.529Z'
+    - sequelize-cli > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2019-07-11T22:41:34.529Z'
+    - sequelize-cli > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2019-07-11T22:41:34.529Z'
+  'npm:uglify-js:20151024':
+    - jade > constantinople > uglify-js:
+        patched: '2019-07-11T22:41:34.529Z'
+    - jade > transformers > uglify-js:
+        patched: '2019-07-11T22:41:34.529Z'
