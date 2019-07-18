@@ -39,7 +39,8 @@
         "swagger-jsdoc": "^3.2.9",
         "swagger-ui-express": "^4.0.2",
         "tsoa": "^2.3.8",
-        "typescript": "^3.4.1"
+        "typescript": "^3.4.1",
+        "url-regex": "^5.0.0"
     },
     "devDependencies": {
         "@stryker-mutator/core": "^2.0.0",
