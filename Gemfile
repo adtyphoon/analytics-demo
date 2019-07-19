@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-source "https://gems.ysh.io/repository/gems/"
 ########################################################################
 # infra
 gem "health_check", "~> 3.0"
