@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - '@ionic/cloud-angular > @ionic/cloud > superagent > extend':
+        patched: '2019-07-23T17:36:51.422Z'
+  'npm:lodash:20180130':
+    - cordova-ios > plist > xmlbuilder > lodash:
+        patched: '2019-07-23T17:36:51.422Z'
+    - cordova-ios > cordova-common > plist > xmlbuilder > lodash:
+        patched: '2019-07-23T17:36:51.422Z'
+  'npm:mime:20170907':
+    - '@ionic/cloud-angular > @ionic/cloud > superagent > mime':
+        patched: '2019-07-23T17:36:51.422Z'
