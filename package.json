@@ -1,8 +1,29 @@
+
 {
-  "name": "analytics-demo",
-  "version": "2.64.0",
-  "description": "Checklist and Inspection manager",
-  "keywords": [],
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Dan M",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build ./ -s --ignore 'node_modules/**/*.js'",
+    "build": "npm run clean && npm run build-server",
+    "lint": "eslint source/ --quiet",
+    "debug:local": "NODE_ENV=local nodemon --inspect --exec babel-node server.js --source-maps",
+    "debug": "node --debug ./build/index.js",
+    "validate": "npm run lint; npm run test && npm outdated --depth 0",
+    "test": "npm run test-models && npm run test-apis",
+    "test-apis": "NODE_ENV=local babel-node ./test/apis",
+    "test-models": "NODE_ENV=local babel-node ./test/models",
+    "test-routes": "NODE_ENV=local babel-node ./test/middlewares",
+    "production": "NODE_ENV=production nodemon --exec babel-node server.js",
+    "development": "NODE_ENV=development nodemon --exec babel-node server.js",
+    "local": "NODE_ENV=local nodemon --exec babel-node server.js",
+    "install-step1": "yarn add  @babel/core @babel/cli @babel/preset-env @babel/node nodemon eslint eslint-config-airbnb-base eslint-plugin-import semistandard --dev",
+    "install-step2": "yarn add express express-session graphql graphql-server-express graphql-subscriptions graphql-tools mongoose subscriptions-transport-ws connect-mongo bcryptjs jsonwebtoken graphql-redis-subscriptions",
+    "run-import": "NODE_ENV=development nodemon --exec babel-node cronjob/downloadMenu.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -39,28 +60,5 @@
     "pug": "^2.0.4",
     "uuid": "^3.3.2",
     "xml-js": "^1.6.11"
-  },
-  "resolutions": {
-    "babel-core": "7.0.0-bridge.0",
-    "angular": "~1.4.14"
-  },
-  "browserslist": [
-    "> 2%",
-    "not dead"
-  ],
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "setupFiles": [
-      "./assets/react/reactTestRunner.js"
-    ],
-    "testMatch": [
-      "**/assets/react/**/*.test.js?(x)"
-    ],
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
-    }
-  },
-  "sideEffects": true
+  }
 }
