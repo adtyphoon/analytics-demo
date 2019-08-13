@@ -1,8 +1,3 @@
-const homeScreenEvents = {
-    'Buy Button': 'ev-buy',
-    'Chat Button': 'ev-chat',
-};
-
 const navigationEvents = {
     'Explore Link': 'ev-explore',
     'Shopping Cart': 'ev-shopping-cart',
