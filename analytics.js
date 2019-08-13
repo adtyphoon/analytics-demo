@@ -1,9 +1,3 @@
-const navigationEvents = {
-    'Explore Link': 'ev-explore',
-    'Shopping Cart': 'ev-shopping-cart',
-    'Compare Link' 'ev-compare',
-};
-
 const footerEvents = {
     'Chat Now': 'ev-chat',
 };
